@@ -5,7 +5,8 @@
 LOG_FILE="/var/log/linux-server-mgmt.log"
 
 # --- Disk monitoring (scripts/disk_monitor.sh) ---
-DISK_THRESHOLD=85
+# Raised: data volumes are large, 85% caused too many false alerts
+DISK_THRESHOLD=90
 
 # --- Backups (scripts/backup.sh) ---
 BACKUP_SOURCE="/etc /home /var/www"
