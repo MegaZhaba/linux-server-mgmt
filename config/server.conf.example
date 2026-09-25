@@ -5,7 +5,10 @@
 LOG_FILE="/var/log/linux-server-mgmt.log"
 
 # --- Disk monitoring (scripts/disk_monitor.sh) ---
-DISK_THRESHOLD=85
+# Warning level, % used (exit code 1)
+DISK_THRESHOLD=80
+# Critical level, % used (exit code 2)
+DISK_CRITICAL=95
 
 # --- Backups (scripts/backup.sh) ---
 BACKUP_SOURCE="/etc /home /var/www"
