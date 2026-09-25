@@ -13,6 +13,7 @@ If a variable is missing, the script falls back to its built-in default.
 | `BACKUP_SOURCE` | `backup.sh` | `/etc` | Space-separated list of directories to archive |
 | `BACKUP_DIR` | `backup.sh` | `/var/backups/linux-server-mgmt` | Where archives are stored |
 | `BACKUP_RETENTION_DAYS` | `backup.sh` | `7` | Archives older than this are deleted |
+| `SERVICES` | `service_check.sh` | `ssh cron` | Space-separated systemd services to check |
 
 ## Security notes
 
