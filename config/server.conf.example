@@ -1,0 +1,13 @@
+# server.conf.example — copy to /etc/linux-server-mgmt/server.conf
+# Shared settings for all scripts in scripts/. Do NOT commit the real file.
+
+# --- Logging ---
+LOG_FILE="/var/log/linux-server-mgmt.log"
+
+# --- Disk monitoring (scripts/disk_monitor.sh) ---
+DISK_THRESHOLD=85
+
+# --- Backups (scripts/backup.sh) ---
+BACKUP_SOURCE="/etc /home /var/www"
+BACKUP_DIR="/var/backups/linux-server-mgmt"
+BACKUP_RETENTION_DAYS=7
