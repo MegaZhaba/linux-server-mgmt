@@ -29,6 +29,6 @@ log "Starting backup of: $BACKUP_SOURCE"
 tar -czf "$archive" $BACKUP_SOURCE 2>>"$LOG_FILE"
 log "Created $archive ($(du -h "$archive" | cut -f1))"
 
-# Retention cleanup
-deleted=$(find "$BACKUP_DIR" -name 'backup-*.tar.gz' -type f -mtime +0 -print -delete | wc -l)
-log "Retention: removed $deleted old archive(s)"
+# Retention: delete archives older than BACKUP_RETENTION_DAYS days
+deleted=$(find "$BACKUP_DIR" -name 'backup-*.tar.gz' -type f -mtime +"$BACKUP_RETENTION_DAYS" -print -delete | wc -l)
+log "Retention: removed $deleted archive(s) older than $BACKUP_RETENTION_DAYS days"
