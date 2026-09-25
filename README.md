@@ -18,7 +18,8 @@ linux-server-mgmt/
 │   ├── system_info.sh     # health report: OS, load, memory, disk, top processes
 │   ├── disk_monitor.sh    # WARNING / CRITICAL alerts on filesystem usage
 │   ├── backup.sh          # tar.gz backups with retention policy (root)
-│   └── user_manage.sh     # add / lock / unlock / remove / list users (root)
+│   ├── user_manage.sh     # add / lock / unlock / remove / list users (root)
+│   └── service_check.sh   # systemd service health check, optional restart (-r)
 ├── config/
 │   └── server.conf.example  # template for /etc/linux-server-mgmt/server.conf
 ├── docs/
