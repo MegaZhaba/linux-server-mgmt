@@ -1,0 +1,21 @@
+# Logs and runtime files
+*.log
+*.pid
+*.tmp
+
+# Local configuration (never commit real server settings or secrets)
+config/server.conf
+.env
+*.key
+*.pem
+
+# Backup archives
+*.tar.gz
+*.tar.zst
+
+# Editor / OS files
+.vscode/
+.idea/
+*.swp
+.DS_Store
+Thumbs.db
