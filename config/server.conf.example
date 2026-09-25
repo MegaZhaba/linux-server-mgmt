@@ -1,0 +1,20 @@
+# server.conf.example — copy to /etc/linux-server-mgmt/server.conf
+# Shared settings for all scripts in scripts/. Do NOT commit the real file.
+
+# --- Logging ---
+LOG_FILE="/var/log/linux-server-mgmt.log"
+
+# --- Disk monitoring (scripts/disk_monitor.sh) ---
+# Warning level, % used (exit code 1).
+# Raised from 80: data volumes are large and caused too many false alerts.
+DISK_THRESHOLD=90
+# Critical level, % used (exit code 2)
+DISK_CRITICAL=95
+
+# --- Backups (scripts/backup.sh) ---
+BACKUP_SOURCE="/etc /home /var/www"
+BACKUP_DIR="/var/backups/linux-server-mgmt"
+BACKUP_RETENTION_DAYS=7
+
+# --- Services (scripts/service_check.sh) ---
+SERVICES="ssh cron nginx"
