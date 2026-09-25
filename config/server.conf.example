@@ -5,8 +5,9 @@
 LOG_FILE="/var/log/linux-server-mgmt.log"
 
 # --- Disk monitoring (scripts/disk_monitor.sh) ---
-# Warning level, % used (exit code 1)
-DISK_THRESHOLD=80
+# Warning level, % used (exit code 1).
+# Raised from 80: data volumes are large and caused too many false alerts.
+DISK_THRESHOLD=90
 # Critical level, % used (exit code 2)
 DISK_CRITICAL=95
 
